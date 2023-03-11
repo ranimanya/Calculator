@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>This is a calculator!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div>
+                    <input id="screen" type="text" readonly/>
+                </div>
+                <div id="line1">
+                    <input type="button" value="AC" onclick="screen.value=''" />
+                    <input type="button" value="DE" onclick="screen.value=screen.value.slice(0,-1)" />
+                    <input type="button" value="." onclick="screen.value+='.'" />
+                    <input type="button" value="&divide;" onclick="screen.value+='/'" />
+                </div>
+                <div id="line2">
+                    <input type="button" value="9" onclick="screen.value+='9'" />
+                    <input type="button" value="8" onclick="screen.value+='8'" />
+                    <input type="button" value="7" onclick="screen.value+='7'" />
+                    <input type="button" value="&times;" onclick="screen.value+='*'" />
+                </div>
+                <div id="line3">
+                    <input type="button" value="6" onclick="screen.value+='6'" />
+                    <input type="button" value="5" onclick="screen.value+='5'" />
+                    <input type="button" value="4" onclick="screen.value+='4'" />
+                    <input type="button" value="-" onclick="screen.value+='-'" />
+                </div>
+                <div id="line4">
+                    <input type="button" value="3" onclick="screen.value+='3'" />
+                    <input type="button" value="2" onclick="screen.value+='2'" />
+                    <input type="button" value="1" onclick="screen.value+='1'" />
+                    <input type="button" value="+" onclick="screen.value+='+'" />
+                </div>
+                <div id="line5">
+                    <input type="button" value="00" onclick="screen.value+='00'" />
+                    <input type="button" value="0" onclick="screen.value+='0'" />
+                    <input id="equals" type="button" value="=" onclick="screen.value=eval(screen.value)" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
